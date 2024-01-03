@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="div">
+        <div class="overlap">
+          <div class="view">
+            <div class="overlap-group">
+              <div class="text-wrapper">ООО “Смокинг Клуб”</div>
+              <div class="text-wrapper-2">ИНН: 4893670251</div>
+              <div class="group">
+                <div class="overlap-group-2">
+                  <div class="text-wrapper-3">8 (496) XXX-XX-07</div>
+                  <img class="vector" src="https://c.animaapp.com/ArAsomwU/img/vector.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Кнопка бургер-меню -->
+<div class="vector-wrapper" id="burgerButton">
+  <img class="img" src="https://c.animaapp.com/ArAsomwU/img/vector-1.svg" />
+</div>
+
+<!-- Выпадающее меню -->
+<div class="box" id="menuContent">
+  <div class="dropdown-menu">
+    <a>Весь ассортимент</a>
+    <div class="dropdown-menu">
+      <a class="menu-item" href="#e-cigarettes" onclick="toggleSubmenu(event)">
+        Электронные сигареты
+        <span class="arrow" id="arrow">&#9650;</span> <!-- Стрелочка вверх -->
+      </a>
+      <div id="e-cigarettes-submenu" class="submenu" style="display: none;">
+        <a class="menu-item" href="#hqd">HQD</a>
+        <a class="menu-item" href="#elf-bar">Elf Bar</a>
+        <a class="menu-item" href="#antbar">AntBar</a>
+        <a class="menu-item" href="#hqd">Vaal</a>
+        <a class="menu-item" href="#elf-bar">Balmy</a>
+        <a class="menu-item" href="#antbar">iJoy</a>
+        <a class="menu-item" href="#hqd">IZI</a>
+        <a class="menu-item" href="#elf-bar">Wotofo</a>
+        <a class="menu-item" href="#antbar">Nasty</a>
+        <a class="menu-item" href="#hqd">GTM BAR</a>
+        <a class="menu-item" href="#elf-bar">VOZOL</a>
+      </div>
+      <!-- ... другие пункты меню ... -->
+    </div>
+    
+    <!-- ... другие пункты меню ... -->
+    <a class="menu-item" href="#tobacco">Табачные изделия</a>
+  </div>
+  
+  
+  
+  </div>
+
+          <script>
+            function toggleSubmenu(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+  var submenu = document.getElementById('e-cigarettes-submenu');
+  var arrow = document.getElementById('arrow');
+  if (submenu.style.display === 'none' || submenu.style.display === '') {
+    submenu.style.display = 'block';
+    arrow.innerHTML = '&#9660;'; // Стрелочка вниз
+  } else {
+    submenu.style.display = 'none';
+    arrow.innerHTML = '&#9650;'; // Стрелочка вверх
+  }
+}
+
+            function toggleSubmenu(event) {
+  event.preventDefault(); // Предотвращаем действие по умолчанию для ссылки
+  var submenu = document.getElementById('e-cigarettes-submenu');
+  if (submenu.style.display === 'none' || submenu.style.display === '') {
+    submenu.style.display = 'block';
+  } else {
+    submenu.style.display = 'none';
+  }
+}
+
+            // Получаем кнопку бургер-меню и элемент с меню
+            const burgerButton = document.getElementById('burgerButton');
+            const menuContent = document.getElementById('menuContent');
+          
+            // Переключаем класс .show при клике на кнопку бургер-меню
+            burgerButton.addEventListener('click', function() {
+              menuContent.classList.toggle('show');
+            });
+          
+            // Закрываем меню при клике вне его
+            window.addEventListener('click', function(event) {
+              if (!burgerButton.contains(event.target) && !menuContent.contains(event.target)) {
+                menuContent.classList.remove('show');
+              }
+            });
+          </script>
+                    
+          
+          <form action="/путь-к-обработчику-поиска" method="POST">
+            <div class="overlap-wrapper">
+              <div class="overlap-2">
+                <div class="overlap-group-wrapper">
+                  <button type="submit" class="div-wrapper">
+                    <div class="text-wrapper-4">Найти</div>
+                  </button>
+                </div>
+                <div class="text-wrapper-5">Поиск товара</div>
+              </div>
+            </div>
+          </form>
+          
+          <div class="view-2" onclick="basketAdding()">
+            <div class="overlap-3">
+              <div class="img-wrapper">
+                 <a href="basket.html"> <!-- Добавляем ссылку на страницу basket.html -->
+                  <img class="vector-2" src="https://c.animaapp.com/ArAsomwU/img/vector-2.svg" />
+                </a>
+              </div>
+              <div class="group-2">
+                <div class="overlap-group-3">
+                  <div class="text-wrapper-6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="view-3">
+          <div class="view-4">
+            <div class="frame"><div class="text-wrapper-7">Код</div></div>
+            <div class="frame-2"><div class="text-wrapper-7">Наименование</div></div>
+            <div class="frame-3"><div class="text-wrapper-7">Описание</div></div>
+            <div class="frame-4"><div class="text-wrapper-7">Цена</div></div>
+            <div class="frame-5"><div class="text-wrapper-7">Количество</div></div>
+            <div class="frame-6"><div class="text-wrapper-7">Общая сумма</div></div>
+            <div class="frame-7"><div class="text-wrapper-7">В корзину</div></div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">4031</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">5361</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">7282</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">9231</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">8024</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">3192</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">4271</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">3028</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">2931</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">9251</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">2033</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">6710</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">9201</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">5281</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">8270</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">2910</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-8">
+            <div class="frame-9"><div class="text-wrapper-8">6051</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12">
+              <div class="text-wrapper-9 price">200 руб.</div>
+            </div>
+            
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+            </div>
+            
+            <div class="frame-14">
+              <div class="text-wrapper-9 total-price">0 руб.</div>
+            </div>
+            
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item1" />
+  <label for="item1" class="cart-checkbox-label"></label>
+</div>
+          </div>
+          <div class="frame-15">
+            <div class="frame-9"><div class="text-wrapper-8">3921</div></div>
+            <div class="frame-10"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-11"><div class="text-wrapper-9">...</div></div>
+            <div class="frame-12"><div class="text-wrapper-9">200 руб.</div></div>
+            <div class="frame-13">
+              <div class="text-wrapper-9" contenteditable="true" oninput="updateTotalPrice(this.parentElement.parentElement)"></div>
+</div>
+
+            <div class="frame-14"><div class="text-wrapper-9"></div></div>
+            <div class="group-wrapper">
+  <input type="checkbox" class="cart-checkbox" id="item13" />
+  <label for="item13" class="cart-checkbox-label"></label>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      function updateSelectedCount() {
+        const checkboxes = document.querySelectorAll('.cart-checkbox:checked');
+      
+        const countDisplay = document.querySelector('.text-wrapper-6');
+        countDisplay.textContent = checkboxes.length; 
+      }
+    
+ 
+      window.addEventListener('load', () => {
+        const checkboxes = document.querySelectorAll('.cart-checkbox');
+        checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updateSelectedCount);
+        });
+      });
+    </script>
+    
+    <script>// Получите ссылку на элемент кнопки бургера
+const BurgerButton = document.getElementById('burgerButton');
+
+// Обработчик клика на кнопку бургера
+BurgerButton.addEventListener('click', function () {
+  // Здесь вы можете вставить код для открытия и закрытия бургер-меню
+  // Например, добавьте класс "active" к вашему бургер-меню и управляйте им в зависимости от состояния меню.
+  // Пример:
+  const burgerMenu = document.getElementById('burgerMenu'); // Замените 'burgerMenu' на ID вашего меню
+  burgerMenu.classList.toggle('active'); // Добавляет или убирает класс "active" при каждом клике
+});
+</script>
+  
+<script>
+// Function to add an item to the basket
+function addToBasket(productId) {
+  // Retrieve the current basket from localStorage or create a new one if it doesn't exist
+  let basket = JSON.parse(localStorage.getItem('basket')) || {};
+  // If the product is already in the basket, increment its count, otherwise add it with a count of 1
+  basket[productId] = basket[productId] ? basket[productId] + 1 : 1;
+  // Store the updated basket in localStorage
+  localStorage.setItem('basket', JSON.stringify(basket));
+  alert('Product added to basket!');
+}
+
+// We will need to add onClick event listeners to buttons in the HTML that call this function with the correct productId
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all the product rows
+  var rows = document.querySelectorAll('.product-row');
+  // Add an "Add to Basket" button to each row
+  rows.forEach(function(row) {
+    // Create the button element
+    var button = document.createElement('button');
+    button.innerText = 'Add to Basket';
+    button.onclick = function() { addRowToBasket(this); };
+    // Append the button to the end of the row
+    var cell = row.insertCell();
+    cell.appendChild(button);
+  });
+});
+// Функция для обновления общей суммы на основе цены и количества
+function updateTotalPrice(container) {
+  // Получите цену и количество товара из соответствующих элементов
+  const priceElement = container.querySelector('.price');
+  const quantityElement = container.querySelector('[contenteditable=true]');
+  const totalPriceElement = container.querySelector('.total-price');
+
+  // Получите цену и количество в числовом формате
+  const price = parseFloat(priceElement.textContent);
+  const quantity = parseFloat(quantityElement.textContent);
+
+  // Рассчитайте общую сумму
+  const totalPrice = price * quantity;
+
+  // Обновите текст в ячейке общей суммы
+  totalPriceElement.textContent = totalPrice.toFixed(2) + ' руб.'; // Форматируйте число с двумя знаками после запятой
+}
+
+ //New function for adding elements to basket
+  function basketAdding(){
+    let existing = localStorage.getItem("basket")
+    existing = existing ? JSON.parse(existing) : []
+    const checkboxes = document.querySelectorAll('.cart-checkbox:checked')
+    console.log(checkboxes)
+    for(let i = 0; i < checkboxes.length; i++){
+      existing.push({"code": checkboxes[i].parentNode.parentNode.childNodes[1].textContent, "name": checkboxes[i].parentNode.parentNode.childNodes[3].textContent, "description": checkboxes[i].parentNode.parentNode.childNodes[5].textContent, "cost": checkboxes[i].parentNode.parentNode.childNodes[7].textContent, "amount": checkboxes[i].parentNode.parentNode.childNodes[9].textContent, "wholeCost": checkboxes[i].parentNode.parentNode.childNodes[11].textContent})
+    }
+    window.localStorage.setItem("basket", JSON.stringify(existing))
+  }
+
+</script>
+<div id="overlay"></div>
+
+</body>
+</html>
